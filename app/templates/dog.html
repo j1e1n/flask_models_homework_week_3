@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{{ title }} - Adoptions</title>
+</head>
+<body>
+    <nav>
+        <p>Home</p>
+        <p>Adopt!</p>
+        <p>Contact</p>
+    </nav>
+
+    <h1>{{ adoption.dog_breed }}</h1>
+    <div class="info">
+        <h3>Adopted by: {{ adoption.customer_name }}</h3>
+        <p>{{ adoption.quantity }} adopted on {{ adoption.order_date}}!</p>
+   
+    </div>
+ 
+
+</body>
+</html>

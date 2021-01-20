@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{{ title }} - Adoptions</title>
+</head>
+<body>
+    
+    <nav>
+        <p>Home</p>
+        <p>Adopt!</p>
+        <p>Contact</p>
+    </nav>
+    
+    <h1>Recent adoptions!</h1>
+    
+    <div class="dogs">
+        {% for adoption in adoptions %}
+    <div class="adoptions">
+      <h2>{{ adoption.dog_breed }}</h2>
+      <a href="/dog/{{adoptions.index(adoption)}}">Show Adoption details</a>
+    </div>
+    {% endfor %}
+    </div>
+
+</body>
+</html>
